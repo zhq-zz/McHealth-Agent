@@ -1,0 +1,15 @@
+# McHealth Agent 依赖清单
+# 安装：pip install -r requirements.txt
+
+# ---- 运行时依赖 ----
+mcp>=1.0.0              # 官方 Model Context Protocol Python SDK
+                        # 用于以标准 Streamable HTTP 协议连接麦当劳 MCP（https://mcp.mcd.cn）
+                        # 说明：麦当劳 MCP 使用标准 MCP 协议而非普通 REST，
+                        #      因此已移除 requests（不再直接拼 /menu 之类的 REST 路径）。
+
+# ---- 可选增强（如需更严格的参数校验可启用）----
+# pydantic>=2.5.0       # 数据模型校验（mcp SDK 已自带 pydantic，一般无需单独声明）
+
+# ---- 开发/测试 ----
+# pytest>=8.0.0         # 单元测试
+# ruff>=0.4.0           # 代码检查

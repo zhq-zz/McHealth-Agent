@@ -1,0 +1,37 @@
+{
+  "_comment": "麦当劳 MCP 配置模板 —— 本文件仅含占位符，严禁写入真实 Token，可安全提交到 GitHub。",
+  "_usage": "复制本文件为 mcp-config.json，然后填写真实信息。mcp-config.json 已被 .gitignore 忽略，不会上传。",
+  "mcp_server_url": "https://mcp.mcd.cn",
+  "token": "REPLACE_WITH_YOUR_MCD_MCP_TOKEN",
+  "timeout": 30,
+  "log_level": "INFO",
+
+  "_context_comment": "以下为「门店上下文」参数。query-meals / calculate-price 等菜单与价格类工具为必填；store_code 可用 query-nearby-stores 工具查询获得。",
+  "store_code": "REPLACE_WITH_STORE_CODE",
+  "order_type": 1,
+  "be_type": 1,
+  "be_code": "",
+
+  "_allergen_comment": "过敏原数据缺失时的处理策略。strict=未知即风险，直接过滤（默认，安全优先）；warn=未知当安全，放行但在结果中显式告警。注意：麦当劳 MCP 目前不提供过敏原数据，strict 下真实模式推荐结果会为空。",
+  "allergen_policy": "strict",
+
+  "_tool_map_comment": "可选：手动指定「能力 → 工具名」映射。留空则使用内置默认映射（query-meals / list-nutrition-foods），仍不匹配时退化为关键词自动匹配。",
+  "tool_map": {
+    "menu": "query-meals",
+    "nutrition": "list-nutrition-foods",
+    "price": "query-meals",
+    "allergen": ""
+  },
+
+  "_field_notes": {
+    "mcp_server_url": "麦当劳 MCP 服务地址（标准 Streamable HTTP MCP 协议）",
+    "token": "访问令牌，仅填写在本地 mcp-config.json 中，切勿提交",
+    "timeout": "单次请求超时时间（秒）",
+    "store_code": "门店编码，query-meals / calculate-price 必填",
+    "order_type": "1-到店（含到店自取、得来速）  2-外送（含麦乐送、企业团餐）",
+    "be_type": "1-到店取餐  2-麦乐送到家  5-得来速(DT)  6-企业团餐",
+    "be_code": "业务编码，得来速/外送/团餐场景必填（到店自取不传）",
+    "allergen_policy": "strict | warn，过敏原数据缺失时的处理策略",
+    "log_level": "日志级别：DEBUG / INFO / WARNING / ERROR"
+  }
+}
