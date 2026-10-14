@@ -126,7 +126,8 @@ $ python src/main.py
 McHealth-Agent/
 ├── README.md                  # 项目说明（本文件）
 ├── MCP_INTEGRATION.md         # MCP 接入文档
-├── CONTEST_DECLARATION.md     # 大赛参赛声明模板
+├── CONTEST_DECLARATION.md     # 大赛参赛声明（官方原文，未改动）
+├── workbuddy.md               # WorkBuddy 开发记录（专项奖励核验用）
 ├── mcp-config.example.json    # MCP 配置样例（仅占位，无真实密钥）
 ├── .gitignore                 # 屏蔽密钥与缓存
 ├── requirements.txt           # 依赖清单
@@ -135,7 +136,8 @@ McHealth-Agent/
 │   ├── mcp_client.py          # 麦当劳 MCP 客户端封装
 │   └── recommender.py         # 推荐引擎（过敏原过滤 + 热量预算 + 营养汇总）
 └── docs/
-    └── workbuddy-dev-log.md   # WorkBuddy 开发日志（专项奖励核验用）
+    ├── workbuddy-dev-log.md   # WorkBuddy 开发日志（详细版）
+    └── registration-issue.md  # 报名 Issue 草稿（含官方格式要求）
 ```
 
 ---
@@ -164,11 +166,15 @@ McHealth-Agent/
 
 ---
 
-## 七、开发工具
+## 七、开发工具与参赛信息
 
 - **开发工具**：WorkBuddy（用于大赛专项奖励申报）
+- **WorkBuddy 开发记录**：见根目录 [`workbuddy.md`](./workbuddy.md)（官方专项奖励核验文件）
+- **开发日志（详细版）**：见 [`docs/workbuddy-dev-log.md`](./docs/workbuddy-dev-log.md)
 - **Demo 形态**：Python 命令行程序（无前端依赖，开箱即用）
-- **开发日志**：见 `docs/workbuddy-dev-log.md`
+- **赛事**：麦当劳程序员创意开发大赛（1024 程序员节）
+- **活动仓库**：https://github.com/M-China/mcd-developer-innovation-challenge
+- **参赛者**：张皓乔（个人参赛，GitHub：[@zhq-zz](https://github.com/zhq-zz)）
 
 ---
 
